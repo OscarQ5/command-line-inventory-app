@@ -1,5 +1,5 @@
-const chalk = require('chalk');
-const { writeJSONFile, getInventory } = require('./helpers');
+const chalk = require("chalk");
+const { writeJSONFile, getInventory } = require("./helpers");
 
 function updateVehicle(args) {
   console.log(chalk.bold('\n--- Update Vehicle ---\n'));

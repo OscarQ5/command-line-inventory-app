@@ -1,9 +1,7 @@
 const chalk = require("chalk")
 const { nanoid } = require("nanoid");
-const helpers = require("./helpers")
+const { addToInventory } = require("./helpers")
 const { faker } = require("@faker-js/faker")
-const path = "../data"
-const fileName = "inventory.json"
 
 function createVehicle() {
     console.log(chalk.bold('\n--- Create Vehicle ---\n'));
@@ -18,16 +16,27 @@ function createVehicle() {
             year: faker.datatype.number({ min: 1990, max: 2024 }),
             type: faker.vehicle.type(),
             inStock: faker.datatype.boolean(),
-            priceInCents: faker.commerce.price(5000000, 10000000, 0, "$"),
+            priceInCents: Number(faker.commerce.price(5000000, 10000000, 0,)),
             currency: "USD",
         }
         return newCars
     }
-    randomCars()
   
-    const inventoryData = helpers.getInventory();
-    inventoryData.push(randomCars);
-    helpers.writeJSONFile(path, fileName, inventoryData);
+    const vehicle = randomCars();
+    if (vehicle) {
+        console.log(chalk.yellow(`ID: ${vehicle.id}`));
+        console.log(`Name: ${vehicle.name}`);
+        console.log(`InStock: ${vehicle.inStock}`);
+        console.log(`Vin: ${vehicle.vin}`);
+        console.log(`Year: ${vehicle.year}`);
+        console.log(`Color: ${vehicle.color}`);
+        console.log(`Type: ${vehicle.type}`);
+        console.log(`Fuel: ${vehicle.fuel}`);
+        console.log(`Price: $${vehicle.priceInCents/100}`);
+        console.log(`Currency: ${vehicle.currency}`);
+        console.log('------------------------');
+    }
+    addToInventory(vehicle);
   
     console.log(chalk.green('\nVehicle created successfully!\n'));
 }

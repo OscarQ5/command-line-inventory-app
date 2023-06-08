@@ -1,36 +1,25 @@
 const fs = require("fs")
-const path = "../data"
-const fileName = "inventory.json"
-const inform = console.log
+const path = require("path")
+const dataDirectory = path.join(__dirname, "../data");
+const fileName = "inventory.json";
 
-function readJSONFile(path, fileName){
-    try {
-        const inventory = fs.readFileSync( `${path}/${fileName}`, "utf-8" );
-        return inventory ? JSON.parse(inventory) : [];
-    } catch (error) {
-        inform(`Error reading file ${path}/${fileName}: ${error.message}`);
-        return null;
-    }
-}
-inform(readJSONFile())
-
-function writeJSONFile(path, fileName, data){
-    try {
-        data = JSON.stringify(data);
-        fs.writeFileSync(`${path}/${fileName}`, data, {encoding: "utf-8"});
-    } catch (error) {
-        inform(`Error writing file ${path}/${fileName}: ${error.message}`)
-    }
+const readJSONFile = () => {
+    const inventory = fs.readFileSync( path.join(dataDirectory, fileName), "utf-8" )
+    return inventory ? JSON.parse(inventory) : []
 }
 
+const writeJSONFile = (data) => {
+    data = JSON.stringify(data)
+    fs.writeFileSync( path.join(dataDirectory, fileName), data, {encoding: "utf-8"})
+}
 function addToInventory(vehicle) {
     const inventoryData = readJSONFile() || [];
     inventoryData.push(vehicle);
-    writeJSONFile(path, fileName, inventoryData);
+    writeJSONFile(inventoryData);
 }
   
 function getInventory() {
-    return readJSONFile(path, fileName) || [];
+    return readJSONFile() || [];
 }
 
 module.exports = {
