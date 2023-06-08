@@ -1,1 +1,12 @@
-[]
+[{
+    "id": "-85ZOAI8ZcHPRzquQO9IM",
+    "name": "Toyota Ranchero",
+    "vin": "ABUM98V0X6YR15936",
+    "color": "tan",
+    "fuel": "Diesel",
+    "year": 2010,
+    "type": "Sedan",
+    "inStock": false,
+    "priceInCents": "$8012398",
+    "currency": "USD"
+  }]
