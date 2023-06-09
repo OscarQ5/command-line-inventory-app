@@ -40,5 +40,5 @@ function createVehicle() {
   
     console.log(chalk.green('\nVehicle created successfully!\n'));
 }
-  
-createVehicle();
+
+module.exports = { createVehicle }

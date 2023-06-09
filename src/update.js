@@ -25,12 +25,13 @@ function updateVehicle(args) {
     vehicle.fuel = fuel;
     vehicle.year = year;
     vehicle.priceInCents = price;
+    console.log(vehicle)
 
-    writeJSONFile("../data", "inventory.json", inventoryData);
+    writeJSONFile(inventoryData);
     console.log(chalk.green('\nVehicle updated successfully!\n'));
   } else {
     console.log(chalk.red('Vehicle not found.\n'));
   }
 }
 
-updateVehicle(process.argv);
+module.exports = { updateVehicle }

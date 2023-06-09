@@ -1,5 +1,5 @@
 const chalk = require("chalk");
-const { writeJSONFile, getInventory } = require("./helpers");
+const { getInventory } = require("./helpers");
 
 function viewVehicleDetails(args) {
   console.log(chalk.bold('\n--- Vehicle Details ---\n'));
@@ -14,11 +14,12 @@ function viewVehicleDetails(args) {
     console.log(`InStock: ${vehicle.inStock}`);
     console.log(`Year: ${vehicle.year}`);
     console.log(`Fuel: ${vehicle.fuel}`);
-    console.log(`Price: ${vehicle.priceInCents.toFixed(2)}`);
+    console.log(`Price: $${vehicle.priceInCents/100}`);
     console.log('------------------------');
   } else {
     console.log(chalk.red('Vehicle not found.\n'));
+    return;
   }
 }
 
-viewVehicleDetails(process.argv);
+module.exports = { viewVehicleDetails }

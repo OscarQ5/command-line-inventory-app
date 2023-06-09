@@ -2,6 +2,11 @@ const readline = require("readline")
 const chalk = require("chalk");
 const inform = console.log
 const { readJSONFile, writeJSONFile, addToInventory, getInventory } = require("./src/helpers")
+const { viewVehicleDetails } = require("./src/view")
+const { createVehicle } = require("./src/create")
+const { listVehicles } = require("./src/list")
+const { deleteVehicle } = require("./src/delete")
+const { updateVehicle } = require("./src/update")
 
 // const rl = readline.createInterface({
 //     input: process.stdin,
@@ -19,33 +24,31 @@ const { readJSONFile, writeJSONFile, addToInventory, getInventory } = require(".
 //     console.log('0. Exit\n');
 // }
 
-function handleCommand(argv){
-    const command = argv[2];
-
+function run(){
+    const command = process.argv[2];
     switch (command) {
         case "list":
-            
+            listVehicles()
             break;
         case "view":
-            
+            const viewId = process.argv;
+            viewVehicleDetails(viewId);
             break;
         case "delete":
-            
+            const deleteId = process.argv;
+            deleteVehicle(deleteId)
             break;
         case "update":
-            
+            const updateId = process.argv;
+            updateVehicle(updateId)
             break;
         case "create":
-            
+            createVehicle()
             break;
         default:
             inform("Invalid command, Please try again.\n")
+            break;
     }
-}
-
-function run(){
-    displayMenu();
-    handleCommand(process.argv);
 }
 
 run();

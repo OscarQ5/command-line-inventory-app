@@ -8,13 +8,15 @@ function deleteVehicle(args) {
   const inventoryData = getInventory();
   const index = inventoryData.findIndex((v) => v.id === id);
 
+
   if (index !== -1) {
-    inventoryData.splice(index, 1);
-    writeJSONFile("../data", "inventory.json", inventoryData);
+    console.log(inventoryData.splice(index, 1));
+    writeJSONFile(inventoryData);
+
     console.log(chalk.green('\nVehicle deleted successfully!\n'));
   } else {
     console.log(chalk.red('Vehicle not found.\n'));
   }
 }
 
-deleteVehicle(process.argv);
+module.exports = { deleteVehicle }

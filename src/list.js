@@ -1,4 +1,4 @@
-const { readJSONFile, writeJSONFile, addToInventory, getInventory } = require("./helpers")
+const { getInventory } = require("./helpers")
 const chalk = require("chalk")
 
 function listVehicles() {
@@ -14,5 +14,5 @@ function listVehicles() {
       console.log('------------------------');
     });
 }
-  
-console.log(listVehicles());
+
+module.exports = { listVehicles }
