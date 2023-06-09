@@ -4,7 +4,12 @@
   "description": "A command-line application where employees can keep track of vehicle inventory.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "list": "node index.js list",
+    "view": "node index.js view",
+    "update": "node index.js update",
+    "delete": "node index.js delete",
+    "create": "node index.js create"
   },
   "keywords": [],
   "author": "Oscar Quintanilla",
