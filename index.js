@@ -1,12 +1,12 @@
 const readline = require("readline")
 const chalk = require("chalk");
-const inform = console.log
-const { readJSONFile, writeJSONFile, addToInventory, getInventory } = require("./src/helpers")
 const { viewVehicleDetails } = require("./src/view")
 const { createVehicle } = require("./src/create")
 const { listVehicles } = require("./src/list")
 const { deleteVehicle } = require("./src/delete")
 const { updateVehicle } = require("./src/update")
+const { addToCart, viewCart, cancelCart } = require("./src/shoppingCart")
+const inform = console.log
 
 // const rl = readline.createInterface({
 //     input: process.stdin,
@@ -24,26 +24,32 @@ const { updateVehicle } = require("./src/update")
 //     console.log('0. Exit\n');
 // }
 
-function run(){
+function run() {
     const command = process.argv[2];
     switch (command) {
         case "list":
             listVehicles()
             break;
         case "view":
-            const viewId = process.argv;
-            viewVehicleDetails(viewId);
+            viewVehicleDetails(process.argv);
             break;
         case "delete":
-            const deleteId = process.argv;
-            deleteVehicle(deleteId)
+            deleteVehicle(process.argv);
             break;
         case "update":
-            const updateId = process.argv;
-            updateVehicle(updateId)
+            updateVehicle(process.argv)
             break;
         case "create":
-            createVehicle()
+            createVehicle();
+            break;
+        case "addToCart":
+            addToCart(process.argv);
+            break;
+        case "viewCart":
+            viewCart();
+            break;
+        case "cancelCart":
+            cancelCart();
             break;
         default:
             inform("Invalid command, Please try again.\n")

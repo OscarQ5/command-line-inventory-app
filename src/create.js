@@ -5,7 +5,7 @@ const { faker } = require("@faker-js/faker")
 
 function createVehicle() {
     console.log(chalk.bold('\n--- Create Vehicle ---\n'));
-  
+
     const randomCars = () => {
         const newCars = {
             id: nanoid(),
@@ -16,12 +16,12 @@ function createVehicle() {
             year: faker.datatype.number({ min: 1990, max: 2024 }),
             type: faker.vehicle.type(),
             inStock: faker.datatype.boolean(),
-            priceInCents: Number(faker.commerce.price(5000000, 10000000, 0,)),
+            priceInCents: Number(faker.commerce.price(5000000, 10000000, 0)),
             currency: "USD",
         }
         return newCars
     }
-  
+
     const vehicle = randomCars();
     if (vehicle) {
         console.log(chalk.yellow(`ID: ${vehicle.id}`));
@@ -32,12 +32,12 @@ function createVehicle() {
         console.log(`Color: ${vehicle.color}`);
         console.log(`Type: ${vehicle.type}`);
         console.log(`Fuel: ${vehicle.fuel}`);
-        console.log(`Price: $${vehicle.priceInCents/100}`);
+        console.log(`Price: $${vehicle.priceInCents / 100}`);
         console.log(`Currency: ${vehicle.currency}`);
         console.log('------------------------');
     }
     addToInventory(vehicle);
-  
+
     console.log(chalk.green('\nVehicle created successfully!\n'));
 }
 

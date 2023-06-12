@@ -14,7 +14,7 @@ const writeJSONFile = (data) => {
 }
 function addToInventory(vehicle) {
     const inventoryData = readJSONFile() || [];
-    inventoryData.push(vehicle);
+    inventoryData.vehicles.push(vehicle);
     writeJSONFile(inventoryData);
 }
   
