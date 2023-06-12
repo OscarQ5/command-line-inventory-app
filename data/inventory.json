@@ -1,1 +1,101 @@
-{"vehicles":[{"id":"REbrL6tSfHAl-49Pz9Lo1","name":"Mini Beetle","vin":"TAJUA6TGKBPK49965","color":"fuchsia","fuel":"Diesel","year":2015,"type":"Extended Cab Pickup","inStock":true,"priceInCents":7227442,"currency":"USD"},{"id":"vd__dtfNYQ4O7cEXc8y_8","name":"Jeep Charger","vin":"8G95YUJE9VSP76537","color":"fuchsia","fuel":"Diesel","year":1992,"type":"SUV","inStock":false,"priceInCents":8488486,"currency":"USD"},{"id":"xW2NffOxQ3fm4zMapqpNv","name":"Volkswagen Taurus","vin":"2HDH6GFVD1ET18496","color":"indigo","fuel":"Electric","year":1994,"type":"Cargo Van","inStock":true,"priceInCents":7599149,"currency":"USD"},{"id":"34ok3v8pmNjoFMnY1zQuP","name":"Bentley Beetle","vin":"2XC8R7MVL0KY40084","color":"yellow","fuel":"Hybrid","year":2022,"type":"Convertible","inStock":false,"priceInCents":7002878,"currency":"USD"},{"id":"KP8W2g0qICnSYQ65sgZCd","name":"Chevrolet 1","vin":"PA1C0WZY2AVM17711","color":"mint green","fuel":"Hybrid","year":2020,"type":"Extended Cab Pickup","inStock":false,"priceInCents":9287209,"currency":"USD"},{"id":"7K93CN8eNBPgywmV2fx1E","name":"Ferrari Taurus","vin":"1DV9Y3LYNLHU95584","color":"violet","fuel":"Diesel","year":2008,"type":"Extended Cab Pickup","inStock":false,"priceInCents":5750566,"currency":"USD"},{"id":"8Oe2Jgnzo3luJ24Rz1bFw","name":"Ford Accord","vin":"JNA3U7KDWFVR85668","color":"green","fuel":"Diesel","year":1994,"type":"Sedan","inStock":false,"priceInCents":9995787,"currency":"USD"},{"id":"Nd31VQCODLQ5IkFa0f7LQ","name":"Maserati Focus","vin":"53WRJNG17CRV92693","color":"pink","fuel":"Electric","year":1999,"type":"Convertible","inStock":false,"priceInCents":9786607,"currency":"USD"}],"cart":[]}
+{
+    "vehicles": [
+        {
+            "id": "REbrL6tSfHAl-49Pz9Lo1",
+            "name": "Mini Beetle",
+            "vin": "TAJUA6TGKBPK49965",
+            "color": "fuchsia",
+            "fuel": "Diesel",
+            "year": 2015,
+            "type": "Extended Cab Pickup",
+            "inStock": true,
+            "priceInCents": 7227442,
+            "currency": "USD"
+        },
+        {
+            "id": "vd__dtfNYQ4O7cEXc8y_8",
+            "name": "Jeep Charger",
+            "vin": "8G95YUJE9VSP76537",
+            "color": "fuchsia",
+            "fuel": "Diesel",
+            "year": 1992,
+            "type": "SUV",
+            "inStock": false,
+            "priceInCents": 8488486,
+            "currency": "USD"
+        },
+        {
+            "id": "xW2NffOxQ3fm4zMapqpNv",
+            "name": "Volkswagen Taurus",
+            "vin": "2HDH6GFVD1ET18496",
+            "color": "indigo",
+            "fuel": "Electric",
+            "year": 1994,
+            "type": "Cargo Van",
+            "inStock": true,
+            "priceInCents": 7599149,
+            "currency": "USD"
+        },
+        {
+            "id": "34ok3v8pmNjoFMnY1zQuP",
+            "name": "Bentley Beetle",
+            "vin": "2XC8R7MVL0KY40084",
+            "color": "yellow",
+            "fuel": "Hybrid",
+            "year": 2022,
+            "type": "Convertible",
+            "inStock": false,
+            "priceInCents": 7002878,
+            "currency": "USD"
+        },
+        {
+            "id": "KP8W2g0qICnSYQ65sgZCd",
+            "name": "Chevrolet 1",
+            "vin": "PA1C0WZY2AVM17711",
+            "color": "mint green",
+            "fuel": "Hybrid",
+            "year": 2020,
+            "type": "Extended Cab Pickup",
+            "inStock": false,
+            "priceInCents": 9287209,
+            "currency": "USD"
+        },
+        {
+            "id": "7K93CN8eNBPgywmV2fx1E",
+            "name": "Ferrari Taurus",
+            "vin": "1DV9Y3LYNLHU95584",
+            "color": "violet",
+            "fuel": "Diesel",
+            "year": 2008,
+            "type": "Extended Cab Pickup",
+            "inStock": false,
+            "priceInCents": 5750566,
+            "currency": "USD"
+        },
+        {
+            "id": "8Oe2Jgnzo3luJ24Rz1bFw",
+            "name": "Ford Accord",
+            "vin": "JNA3U7KDWFVR85668",
+            "color": "green",
+            "fuel": "Diesel",
+            "year": 1994,
+            "type": "Sedan",
+            "inStock": false,
+            "priceInCents": 9995787,
+            "currency": "USD"
+        },
+        {
+            "id": "Nd31VQCODLQ5IkFa0f7LQ",
+            "name": "Maserati Focus",
+            "vin": "53WRJNG17CRV92693",
+            "color": "pink",
+            "fuel": "Electric",
+            "year": 1999,
+            "type": "Convertible",
+            "inStock": false,
+            "priceInCents": 9786607,
+            "currency": "USD"
+        }
+    ],
+    "cart": []
+}

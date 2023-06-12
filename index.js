@@ -2,7 +2,7 @@ const readline = require("readline")
 const chalk = require("chalk");
 const { viewVehicleDetails } = require("./src/view")
 const { createVehicle } = require("./src/create")
-const { listVehicles } = require("./src/list")
+const { listVehicles, listVehiclesAfter2000 } = require("./src/list")
 const { deleteVehicle } = require("./src/delete")
 const { updateVehicle } = require("./src/update")
 const { addToCart, viewCart, cancelCart } = require("./src/shoppingCart")
@@ -50,6 +50,9 @@ function run() {
             break;
         case "cancelCart":
             cancelCart();
+            break;
+        case "vehiclesAfter2000":
+            listVehiclesAfter2000();
             break;
         default:
             inform("Invalid command, Please try again.\n")

@@ -75,7 +75,15 @@ To delete a vehicle from the inventory, use the following command:
 npm run delete <vehicleId>
 ```
 
-Replace `<vehicleId>` with the ID of the vehicle you want to delete.
+### Vehicles Manufactured After The Year 2000
+
+To see vehicles from the inventory manufactured after the year 2000, use the following command:
+
+```
+npm run vehiclesafter2000
+```
+
+This will display a list of vehicles with their details that were manufactured after the year 2000.
 
 ### Shopping Cart
 

@@ -12,7 +12,8 @@
     "create": "node index.js create",
     "addtocart": "node index.js addToCart",
     "viewcart": "node index.js viewCart",
-    "cancelcart": "node index.js cancelCart"
+    "cancelcart": "node index.js cancelCart",
+    "vehiclesafter2000": "node index.js vehiclesAfter2000"
   },
   "keywords": [],
   "author": "Oscar Quintanilla",
