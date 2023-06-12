@@ -10,7 +10,7 @@ function listVehicles() {
     console.log(`InStock: ${vehicle.inStock}`);
     console.log(`Year: ${vehicle.year}`);
     console.log(`Fuel: ${vehicle.fuel}`);
-    console.log(`Price: ${vehicle.priceInCents / 100}`);
+    console.log(`Price: $${vehicle.priceInCents / 100}`);
     console.log('------------------------');
   });
 }

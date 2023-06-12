@@ -1,7 +1,7 @@
 {
   "name": "command-line-inventory-app",
   "version": "1.0.0",
-  "description": "A command-line application where employees can keep track of vehicle inventory.",
+  "description": "A command-line application where employees can keep track of vehicle inventory and customers can shop.",
   "main": "index.js",
   "scripts": {
     "test": "jest",
@@ -9,7 +9,10 @@
     "view": "node index.js view",
     "update": "node index.js update",
     "delete": "node index.js delete",
-    "create": "node index.js create"
+    "create": "node index.js create",
+    "addtocart": "node index.js addToCart",
+    "viewcart": "node index.js viewCart",
+    "cancelcart": "node index.js cancelCart"
   },
   "keywords": [],
   "author": "Oscar Quintanilla",
